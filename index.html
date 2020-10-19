@@ -13,12 +13,8 @@
 </head>
 <body>
 
-	<section id="title">
-		<!-- Nav Bar -->
-
-		<div class="container-fluid">
-			<nav class="navbar navbar-expand-lg navbar-dark">
-				<a class="navbar-brand" href="#">tindog</a>
+	<nav class="navbar navbar-expand-lg navbar-dark">
+				<a class="navbar-brand" href="#"><img src="./images/logo.svg"></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -26,30 +22,59 @@
 			
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item ">
-							<a class="nav-link" href="#">Contact</a>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Şirket
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<a class="dropdown-item" href="#">Güvenlik</a>
+								<a class="dropdown-item" href="#">Bize Ulaşın</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Yasal
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<a class="dropdown-item" href="#">Gizlilik</a>
+								<a class="dropdown-item" href="#">Koşullar</a>
+								<a class="dropdown-item" href="#">Sıkça Sorulan Sorular</a>
+								<a class="dropdown-item" href="#">Güvenli Koklaşma İpuçları</a>
+								<a class="dropdown-item" href="#">Hot-Pet Topluluk Kuralları</a>
+							</div>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Pricing</a>
-						</li>
-						<li class="nav-item ">
-							<a class="nav-link" href="#">Download</a>
+							<a class="nav-link" href="#">Abonelikler</a>
 						</li>
 					</ul>
+					<button class="btn btn-outline-light btn-lg download-btn" type="button"><i class="fab fa-google-play"></i> İndir</button>
+					<button class="btn btn-dark btn-lg download-btn" type="button"><i class="fab fa-apple"></i> İndir</button>
 				</div>
 			</nav>
 
-			<!-- Title -->
-			<div class="row">
-				<div class="col-lg-6">
-					<h1>Meet new and interesting dogs nearby.</h1>
-					<button class="btn btn-dark btn-lg download-btn" type="button"><i class="fab fa-apple"></i> Download</button>
-					<button class="btn btn-outline-light btn-lg download-btn" type="button"><i class="fab fa-google-play"></i> Download</button>
-				</div>
-				<div class="col-lg-6">
-					<img class="title-image" src="images/iphone6.png" alt="iphone-mockup">
+
+	<section id="title">
+		<!-- Nav Bar -->
+
+		<div class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<div class="row">
+						<div class="col-lg-6">
+							<h1>Meet new and interesting dogs nearby.</h1>
+						</div>
+						<div class="col-lg-6">
+							<img class="title-image" src="images/iphone6.png" alt="iphone-mockup">
+						</div>
+					</div>
 				</div>
 			</div>
+			<a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+			</a>
+			<a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+				<span class="carousel-control-next-icon"</span>
+			</a>
 		</div>
 	</section>
 
@@ -78,51 +103,6 @@
 			</div>
 		</div>
 	</section>
-
-
-	<!-- Testimonials -->
-
-	<section id="testimonials">
-
-		<div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<h2>I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
-					<img class="testimonial-image" src="images/dog-img.jpg" alt="dog-profile">
-					<em>Pebbles, New York</em>
-				</div>
-				<div class="carousel-item">
-					<h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life.
-						I think.</h2>
-					<img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile">
-					<em>Beverly, Illinois</em>
-				</div>
-			</div>
-			<a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
-				<span class="carousel-control-prev-icon"></span>
-			</a>
-			<a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
-				<span class="carousel-control-next-icon"</span>
-			</a>
-		</div>
-
-
-
-
-	</section>
-
-
-	<!-- Press -->
-
-	<section id="press">
-		<img class="press-logo" src="images/techcrunch.png" alt="tc-logo">
-		<img class="press-logo" src="images/tnw.png" alt="tnw-logo">
-		<img class="press-logo" src="images/bizinsider.png" alt="biz-insider-logo">
-		<img class="press-logo" src="images/mashable.png" alt="mashable-logo">
-
-	</section>
-
-
 	<!-- Pricing -->
 
 	<section id="pricing">
@@ -134,32 +114,32 @@
 			<div class="pricing-column col-lg-4 col-md-6">
 				<div class="card shadow-sm">
 				<div class="card-header">
-					<h3 class="my-0 font-weight-normal">Chihuahua</h3>
+					<h3 class="my-0 font-weight-normal">Ücretsiz</h3>
 				</div>
 				<div class="card-body">
-					<h2 class="card-title pricing-card-title">Free</h2>
+						<h2 class="card-title pricing-card-title">0TL / ay</h2>
 					<ul class="list-unstyled mt-3 mb-4">
-						<li>5 Matches Per Day</li>
-						<li>10 Messages Per Day</li>
-						<li>nlimited App Usage</li>
+						<li>Yalnızca 1 Evcil Hayvan Profili</li>
+						<li>Günlük 1 Favori Pet</li>
+						<li>Reklamlar</li>
 					</ul>
-					<button class="btn btn-lg btn-block btn-outline-dark" type="button">Sign Up</button>
+					<button class="btn btn-lg btn-block btn-outline-dark" type="button">Kayıt Ol</button>
 				</div>
 				</div>
 			</div>
 			<div class="pricing-column col-lg-4 col-md-6">
 				<div class="card shadow-sm">
 					<div class="card-header">
-						<h3 class="my-0 font-weight-normal">Labrador</h3>
+						<h3 class="my-0 font-weight-normal">Plus</h3>
 					</div>
 					<div class="card-body">
-						<h2 class="card-title pricing-card-title">$49 / mo</h2>
+						<h2 class="card-title pricing-card-title">14.99TL / mo</h2>
 						<ul class="list-unstyled mt-3 mb-4">
-							<li>Unlimited Matches</li>
-							<li>Unlimited Messages</li>
-							<li>Unlimited App Usage</li>
+							<li>3 Evcil Hayvan Profili</li>
+							<li>Günlük 3 Favori Pet</li>
+							<li>Reklamsız</li>
 						</ul>
-						<button class="btn btn-lg btn-block btn-dark" type="button">Sign Up</button>
+						<button class="btn btn-lg btn-block btn-dark" type="button">Kayıt Ol</button>
 					</div>
 				</div>
 			</div>
@@ -170,14 +150,13 @@
 						<h3 class="my-0 font-weight-normal">Mastiff</h3>
 					</div>
 					<div class="card-body">
-						<h2 class="card-title pricing-card-title">$99 / mo</h2>
+						<h2 class="card-title pricing-card-title">24.99TL / mo</h2>
 						<ul class="list-unstyled mt-3 mb-4">
-							<li>Pirority Listing</li>
-							<li>Unlimited Matches</li>
-							<li>Unlimited Messages</li>
-							<li>Unlimited App Usage</li>
+							<li>10 Evcil Hayvan Profili</li>
+							<li>Günlük 5 Favori Pet</li>
+							<li>Reklamsız</li>
 						</ul>
-						<button class="btn btn-lg btn-block btn-dark" type="button">Sign Up</button>
+						<button class="btn btn-lg btn-block btn-dark" type="button">Kayıt Ol</button>
 					</div>
 				</div>
 			</div>	
@@ -191,7 +170,7 @@
 
 		<h3 class="cta-header">Find the True Love of Your Dog's Life Today.</h3>
 		<button class="btn btn-dark btn-lg download-btn" type="button"><i class="fab fa-apple"></i> Download</button>
-		<button class="btn btn-outline-light btn-lg download-btn" type="button"><i class="fab fa-google-play"></i>
+		<button class="btn btn-outline-dark btn-lg download-btn" type="button"><i class="fab fa-google-play"></i>
 			Download</button>
 
 	</section>
@@ -204,7 +183,7 @@
 		<i class="fab fa-facebook-f social-icons"></i>
 		<i class="fab fa-instagram social-icons"></i>
 		<i class="fas fa-envelope social-icons"></i>
-		<p>© Copyright 2018 TinDog</p>
+		<p>© Copyright 2018 Hot-Pet</p>
 
 	</footer>
 

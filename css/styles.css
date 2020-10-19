@@ -28,20 +28,21 @@ p {
     padding: 3% 15% 7%;
 }
 
-.btn {
-
-}
-
 /* Navigation Bar */
 
 .navbar {
-    padding: 0 0 4.5rem 0;
+    background-color: #ff4c68;
+    padding: 1rem 6rem;
 }
 
 .navbar-brand {
     font-family: "Ubuntu";
     font-size: 2.5rem;
     font-weight: bold;
+}
+
+.navbar-brand img {
+    width: 50%;
 }
 
 .nav-item {
@@ -54,19 +55,23 @@ p {
     font-size: 1.2rem;
 }
 
-
 /* Download Buttons */
 
 .download-btn {
-    margin: 5% 3% 5% 0;
+    margin: 3% 1% 3% 1%;
 }
 
 /* Title */
+
+.carousel-item {
+    padding: 4% 14% 10% 14%;
+}
 
 #title {
     font-family: 'Montserrat', sans-serif;
     color: #fff;
     background-color: #ff4c68;
+    min-height: 60vh;
 }
 
 .title-image {
@@ -100,41 +105,16 @@ p {
     color: #ff4c68
 }
 
-/* Testimonials Section */
-
-#testimonials {
-    text-align: center;
-    background-color: #ef8172;
-    color: #FFF;
-}
-
-.carousel-item {
-    padding: 7% 14%;
-}
-
-.testimonial-image {
-    width: 10%;
-    border-radius: 100%;
-    margin: 20px;
-}
-
-/* Press Section */
-
-#press {
-    background-color: #ef8172;
-    text-align: center;
-    padding-bottom: 3%;
-}
-
-.press-logo {
-    width: 15%;
-    margin: 20px 20px 50px;
-}
-
 /* Pricing Sectio */
 
 #pricing {
     padding: 7% 15%;
+    background-color: #ff4c68;
+
+}
+
+#pricing p {
+    color: #FFF;
 }
 
 .pricing-column {
@@ -144,8 +124,6 @@ p {
 /* CTA Section */
 
 #cta {
-    background-color: #ff4c68;
-    color: #fff;
     text-align: center;
     padding: 5% 20%;
 }
