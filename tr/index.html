@@ -9,12 +9,12 @@
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&family=Ubuntu:wght@300;500&display=swap"
 		rel="stylesheet">
-	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
 	<nav class="navbar navbar-expand-lg navbar-dark">
-		<a class="navbar-brand" href="./"><img src="./images/logo.svg"></a>
+		<a class="navbar-brand" href="./">hot-pet</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -28,7 +28,7 @@
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 						<a class="dropdown-item" href="#">Güvenlik</a>
-						<a class="dropdown-item" href="./contact.html">Bize Ulaşın</a>
+						<a class="dropdown-item" href="./contact.html">İletişim</a>
 					</div>
 				</li>
 				<li class="nav-item dropdown">
@@ -38,20 +38,26 @@
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 						<a class="dropdown-item" href="./documents/gizlilik-politikasi.pdf">Gizlilik Politikası</a>
 						<a class="dropdown-item" href="./documents/kullanim-sartlari.pdf">Kullanım Şartları</a>
-						<a class="dropdown-item" href="./documents/cerez-politikasi.pdf">Çerez Politikası</a>
-						<a class="dropdown-item" href="./documents/kvkk.pdf">Kişisel Verilerin Korunması</a>
-						<a class="dropdown-item" href="./documents/sniff-safely.pdf">Güvenli Koklaşma İpuçları</a>
-						<a class="dropdown-item" href="./documents/topluluk-kurallari.pdf">Hot-Pet Topluluk Kuralları</a>
-						<a class="dropdown-item" href="./documents/kedi-ciftlestirme-sozlesmesi.pdf">Kedi Çiftleştirme Sözleşmesi</a>
-						<a class="dropdown-item" href="./documents/kopek-ciftlestirme-sozlesmesi.pdf">Köpek Çiftleştirme Sözleşmesi</a>
+						<!-- <a class="dropdown-item" href="./documents/">Çerez Politikası</a> -->
+						<a class="dropdown-item" href="./documents/kvkk.pdf">KVKK</a>
+						<a class="dropdown-item" href="./documents/sniff-safely.pdf">Güvenli Koklaşma</a>
+						<a class="dropdown-item" href="./documents/topluluk-kurallari.pdf">Topluluk Kuralları</a>
 					</div>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#pricing">Abonelikler</a>
 				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="fas fa-globe"></i> TR
+					</a>
+					<div class="dropdown-menu language__item__container" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item language__item" href="/">EN</a>	
+					</div>
+				</li>
 			</ul>
-			<button class="btn btn-light btn-lg download-btn text-center" type="button"><img class="icon--google-play" src="./images/googleplay-icon.png"> İndir</button>
-			<button class="btn btn-dark btn-lg download-btn text-center" type="button"><i class="fab fa-apple"></i> İndir</button>
+			<button class="btn btn-light btn-lg download-btn text-center" type="button"><img class="icon--google-play" src="./images/googleplay-icon.png"></button>
+			<button class="btn btn-dark btn-lg download-btn text-center" type="button"><i class="fab fa-apple"></i></button>
 		</div>
 	</nav>
 
@@ -59,26 +65,51 @@
 	<section id="title">
 		<!-- Nav Bar -->
 
-		<div class="carousel slide" data-ride="carousel">
+		<!-- <div class="carousel" data-bs-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-bs-target="#testimonial-carousel" data-bs-slide-to="0" class="active"></li>
+				<li data-bs-target="#testimonial-carousel" data-bs-slide-to="1"></li>
+				<li data-bs-target="#testimonial-carousel" data-bs-slide-to="2"></li>
+			</ol>
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<div class="row">
-						<div class="col-lg-6">
-							<h1>Meet new and interesting dogs nearby.</h1>
-						</div>
-						<div class="col-lg-6">
-							<img class="title-image" src="images/iphone6.png" alt="iphone-mockup">
-						</div>
-					</div>
+						<img class="d-block w-100 title-image" src="images/site3.jpg" alt="iphone-mockup">
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100 title-image" src="images/site3.jpg" alt="iphone-mockup">
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100 title-image" src="images/site3.jpg" alt="iphone-mockup">
 				</div>
 			</div>
-			<a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+			<a class="carousel-control carousel-control-prev" href="#testimonial-carousel" role="button" data-bs-slide="prev">
 				<span class="carousel-control-prev-icon"></span>
 			</a>
-			<a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
-				<span class="carousel-control-next-icon"</span>
+			<a class="carousel-control carousel-control-next" href="#testimonial-carousel" role="button" data-bs-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</a>
+		</div> -->
+
+		<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="0">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="../images/site1.jpg" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img src="../images/site2.jpg" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img src="../images/site3.jpg" class="d-block w-100" alt="...">
+				</div>
+			</div>
+			<a class="carousel-control carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			</a>
+			<a class="carousel-control carousel-control-next" href="#carousel" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 			</a>
 		</div>
+	</nav>
 	</section>
 
 
@@ -110,7 +141,7 @@
 
 	<section id="pricing">
 
-		<h2>A Plan for Every Dog's Needs</h2>
+		<h2 class="pricing__header">A Plan for Every Dog's Needs</h2>
 		<p>Simple and affordable price plans for your and your dog.</p>
 
 		<div class="row text-center">
@@ -122,11 +153,11 @@
 				<div class="card-body">
 						<h2 class="card-title pricing-card-title">0TL / ay</h2>
 					<ul class="list-unstyled mt-3 mb-4">
-						<li>Yalnızca 1 Profili</li>
-						<li>Günlük 1 Favori Pet</li>
-						<li>Reklamlar</li>
+						<li>Yalnızca 1 evcil hayvan profili</li>
+						<li>Günde 1 favori evcil hayvan</li>
+						<li>Bazen reklamlarımız olacak</li>
 					</ul>
-					<button class="btn btn-lg btn-block btn-outline-dark" type="button">Kayıt Ol</button>
+					<button class="btn btn-lg btn-block btn-outline-dark btn--purchase" type="button">Kayıt Ol</button>
 				</div>
 				</div>
 			</div>
@@ -136,11 +167,11 @@
 						<h3 class="my-0 font-weight-normal">Plus <img class="icon--plus" src="./images/plus-icon.svg"> </h3>
 					</div>
 					<div class="card-body">
-						<h2 class="card-title pricing-card-title">14.99TL / mo</h2>
+						<h2 class="card-title pricing-card-title">19.99TL / ay</h2>
 						<ul class="list-unstyled mt-3 mb-4">
-							<li>3 Evcil Hayvan Profili</li>
-							<li>Günlük 3 Favori Pet</li>
-							<li>Reklamsız</li>
+							<li>3 taneye kadar evcil hayvan profili oluşturabilme</li>
+							<li>Günde 3 favori evcil haycan</li>
+							<li>Reklamlar olmadan gezin</li>
 						</ul>
 						<button class="btn btn-lg btn-block btn-dark" type="button">Kayıt Ol</button>
 					</div>
@@ -153,11 +184,11 @@
 						<h3 class="my-0 font-weight-normal">Platinium <img class="icon--platinium" src="./images/platinium-icon.svg"></h3>
 					</div>
 					<div class="card-body">
-						<h2 class="card-title pricing-card-title">24.99TL / mo</h2>
+						<h2 class="card-title pricing-card-title">29.99TL / ay</h2>
 						<ul class="list-unstyled mt-3 mb-4">
-							<li>10 Evcil Hayvan Profili</li>
-							<li>Günlük 5 Favori Pet</li>
-							<li>Reklamsız</li>
+							<li>10 taneye kadar evcil hayvan profili oluşturabilme</li>
+							<li>Günde 5 favori evcil haycan</li>
+							<li>Reklamlar olmadan gezin</li>
 						</ul>
 						<button class="btn btn-lg btn-block btn-dark" type="button">Kayıt Ol</button>
 					</div>
@@ -166,25 +197,21 @@
 		</div>
 	</section>
 
-
-	<!-- Call to Action -->
-
-	<section id="cta">
-
-		<h3 class="cta-header">Find the True Love of Your Dog's Life Today.</h3>
-		<button class="btn btn-light btn-lg download-btn text-center" type="button"><img class="icon--google-play" src="./images/googleplay-icon.png"> İndir</button>
-		<button class="btn btn-dark btn-lg download-btn text-center" type="button"><i class="fab fa-apple"></i> İndir</button>
-
-	</section>
-
-
 	<!-- Footer -->
 
 	<footer id="footer">
-		<i class="fab fa-twitter social-icons icon--twitter"></i>
-		<i class="fab fa-facebook-f social-icons icon--facebook"></i>
-		<i class="fab fa-instagram social-icons icon--instagram"></i>
-		<i class="fas fa-envelope social-icons icon--email"></i>
+		<div class="social-icons__container">
+			<i class="fab fa-twitter social-icons icon--twitter"></i>
+		</div>
+		<div class="social-icons__container">
+			<i class="fab fa-facebook-f social-icons icon--facebook"></i>
+		</div>
+		<div class="social-icons__container">
+			<i class="fab fa-instagram social-icons icon--instagram"></i>
+		</div>
+		<div class="social-icons__container">
+			<i class="fas fa-envelope social-icons icon--email"></i>
+		</div>
 		<p>© Copyright 2020 Hot-Pet</p>
 
 	</footer>
