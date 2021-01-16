@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Hot-Pet</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&family=Ubuntu:wght@300;500&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark">
+		<a class="navbar-brand" href="../">hot-pet</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>		
+		
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Company
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="../about.html">About Us</a>
+						<a class="dropdown-item" href="../contact.html">Contact Us</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Legal
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="../documents/privacy-policy.html">Privacy Policy</a>
+						<a class="dropdown-item" href="../documents/terms-of-use.html">Terms of Use</a>
+						<!-- <a class="dropdown-item" href="./documents/">Çerez Politikası</a> -->
+						<a class="dropdown-item" href="../documents/kvkk.html">Data Protection</a>
+						<a class="dropdown-item" href="../documents/sniff-safely.html">Sniff Safely</a>
+						<a class="dropdown-item" href="../documents/community-rules.html">Community Rules</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#pricing">Subscriptions</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<img class="language__icon" src="../images/worldwide.svg"> <span class="language__text">EN</span>
+					</a>
+					<div class="dropdown-menu language__item__container" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item language__item" href="../tr/"><span class="language__item">TR</span></a>	
+					</div>
+				</li>
+			</ul>
+			<button class="btn btn-light btn-lg download-btn text-center" type="button"><img class="icon--google-play" src="../images/googleplay-icon.png"></button>
+<button onclick="location.href='https://apps.apple.com/tr/app/hot-pet/id1537957530'" class="btn btn-dark btn-lg download-btn text-center" type="button"><i class="fab fa-apple"></i></button>		</div>
+	</nav>
+
+  <section id="form__contact">
+		<h2 class="form__header">Problems with login</h2>
+    <div>
+      <form>
+        <div class="align-items-center">
+          <div class="col-xl-6 col-lg-7 col-md-9 col-sm-11 form__section">
+            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <option selected value="">Choose...</option>
+              <option value="banned-account">I can't log in, my account is banned</option>
+              <option value="under-review">I can't log in, my account is under review</option>
+              <option value="under-review">Another log-in problem</option>
+              <option value="cant-delete-my-account">I can't delete my account</option>
+              <option value="update-phone-number">I need to update my phone number</option>
+              <option value="cant-register">I can't register</option>
+            </select>
+          </div>
+          <div>
+            <p class="form__text">
+              If you have a problem with any of the above items, please
+              inform us of the problem you are experiencing by entering
+              the topic title in the specified field.
+            </p>
+            <p class="form__text">
+              We take breaches of our policies very seriously. Our audit
+              team reviews profiles 24/7.
+              If the profile has not been examined in any complaint, you
+              can be assured that it will be reviewed as soon as possible
+              and appropriate action will be taken in accordance with our
+              policies.
+            </p>
+            <p class="form__text">
+              Do not forget that you will not be able to re-register with
+              your banned or under review account using your phone
+              number and/or email account.
+              While we do not currently offer a formal application process,
+              we regularly review banned profiles based on feedback.
+              You can contact us using the section below:
+            </p>
+
+          </div>
+          <div class="col-xl-6 col-lg-7 col-md-9 col-sm-11  form__section">
+            <label>E-mail Address</label>
+            <input type="email" class="form-control" placeholder="Enter your e-mail address" required>
+          </div>
+          <div class="col-xl-6 col-lg-7 col-md-9 col-sm-11  form__section">
+            <label>Phone Number</label>
+            <input type="email" class="form-control" placeholder="Enter your phone number" required>
+            <small class="form-text text-muted">
+              If any, the phone number associated with your Hot-Pet
+              account with the country code at the beginning (for example,
+              +905555551234)
+            </small>
+
+          </div>
+          <div class="col-xl-6 col-lg-7 col-md-9 col-sm-11  form__section">
+            <label>Explanation</label>
+            <textarea class="form-control" rows="3" required></textarea>
+            <small class="form-text text-muted">
+              What information should we have? Please give as many
+              details as possible.
+            </small>
+          </div>
+          <button type="submit" class="btn btn-secondary btn--contact">Send</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+
+	<!-- Footer -->
+	<footer id="footer">
+		<span class="footer__text">Stay Social!</span>
+		<div class="social-icons__container">
+			<a href="https://twitter.com/hotpetapp"><i class="fab fa-twitter social-icons icon--twitter"></i></a>
+		</div>
+		<div class="social-icons__container">
+			<a href="https://www.facebook.com/Hotpetapp"><i class="fab fa-facebook-f social-icons icon--facebook"></i></a>
+		</div>
+		<div class="social-icons__container">
+			<a href="https://www.instagram.com/hotpetapp/"><i class="fab fa-instagram social-icons icon--instagram"></i></a>
+		</div>
+		<div class="social-icons__container">
+			<a href="mailto:help@hot-pet.com"><i class="fas fa-envelope social-icons icon--email"></i></a>
+		</div>
+		<p>© Copyright 2021 Cuk Creative</p>
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

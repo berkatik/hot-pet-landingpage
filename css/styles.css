@@ -36,10 +36,17 @@ h3 {
     font-family: 'Arlon-Bold';
 }
 
-p {
+p{
     color: #afafaf;
 }
 
+li {
+    color: #afafaf;
+}
+
+a {
+    color: #ff4c68;
+}
 
 
 .container-fluid {
@@ -171,9 +178,12 @@ p {
 /* Feature Page */
 
 #features {
-    padding: 7% 14%;
+    /* padding: 7% 14%; */
     background-color: #fff;
     position: relative;
+    background-size: 100%;
+    height: 200px;
+    /* background-image: url("../images/white-background.jpg"); */
 }
 
 .feature-box {
@@ -273,6 +283,7 @@ p {
 
 .social-icons {
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .social-icons__container {
@@ -288,6 +299,11 @@ p {
 
 .social-icons__container i {
     margin: auto;
+}
+
+.social-icons__container a {
+    text-decoration: none;
+    color: #FFF;
 }
 
 @media (max-width: 1028px) {
@@ -323,7 +339,7 @@ p {
     margin-left: 5px;
 }
 
-.footer__text {cta
+.footer__text {
     position: relative;
     margin-left: -15.5%;
     margin-right: 1%;
@@ -341,6 +357,11 @@ p {
     padding-bottom: 2vw;
     padding-left: 1vw;
     font-family: 'Arlon';
+}
+
+.form__text {
+    width: 70%;
+    margin-left: 16px;
 }
 
 .form__section {
