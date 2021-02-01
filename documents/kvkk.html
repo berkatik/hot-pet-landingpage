@@ -1,425 +1,493 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hot-Pet</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&family=Ubuntu:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "473689777127578");
+      fbq("track", "PageView");
+    </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        src="https://www.facebook.com/tr?id=473689777127578&ev=PageView&noscript=1"
+      />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="/">hot-pet</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-<head>
-  <meta charset="utf-8">
-  <title>Hot-Pet</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&family=Ubuntu:wght@300;500&display=swap"
-		rel="stylesheet">
-	<link rel="stylesheet" href="../css/styles.css">
-</head>
-<body>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Company
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="../about.html">About Us</a>
+              <a class="dropdown-item" href="./contact.html">Contact Us</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Legal
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="./privacy-policy.html"
+                >Privacy Policy</a
+              >
+              <a class="dropdown-item" href="./terms-of-use.html"
+                >Terms of Use</a
+              >
+              <!-- <a class="dropdown-item" href="./documents/">Çerez Politikası</a> -->
+              <a class="dropdown-item" href="./kvkk.html">Data Protection</a>
+              <a class="dropdown-item" href="./sniff-safely.html"
+                >Sniff Safely</a
+              >
+              <a class="dropdown-item" href="./community-rules.html"
+                >Community Rules</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pricing">Subscriptions</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <img class="language__icon" src="../images/worldwide.svg" />
+              <span class="language__text">EN</span>
+            </a>
+            <div
+              class="dropdown-menu language__item__container"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <a class="dropdown-item language__item" href="/tr/"
+                ><span class="language__item">TR</span></a
+              >
+            </div>
+          </li>
+        </ul>
+        <button
+          class="btn btn-light btn-lg download-btn text-center"
+          type="button"
+        >
+          <img class="icon--google-play" src="../images/googleplay-icon.png" />
+        </button>
+        <button
+          onclick="location.href='https://apps.apple.com/tr/app/hot-pet/id1537957530'"
+          class="btn btn-dark btn-lg download-btn text-center"
+          type="button"
+        >
+          <i class="fab fa-apple"></i>
+        </button>
+      </div>
+    </nav>
 
-	<nav class="navbar navbar-expand-lg navbar-dark">
-		<a class="navbar-brand" href="/">hot-pet</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>		
-		
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Company
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item" href="../about.html">About Us</a>
-						<a class="dropdown-item" href="./contact.html">Contact Us</a>
-					</div>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Legal
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item" href="./privacy-policy.html">Privacy Policy</a>
-						<a class="dropdown-item" href="./terms-of-use.html">Terms of Use</a>
-						<!-- <a class="dropdown-item" href="./documents/">Çerez Politikası</a> -->
-						<a class="dropdown-item" href="./kvkk.html">Data Protection</a>
-						<a class="dropdown-item" href="./sniff-safely.html">Sniff Safely</a>
-						<a class="dropdown-item" href="./community-rules.html">Community Rules</a>
-					</div>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#pricing">Subscriptions</a>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<img class="language__icon" src="../images/worldwide.svg"> <span class="language__text">EN</span>
-					</a>
-					<div class="dropdown-menu language__item__container" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item language__item" href="/tr/"><span class="language__item">TR</span></a>	
-					</div>
-				</li>
-			</ul>
-			<button class="btn btn-light btn-lg download-btn text-center" type="button"><img class="icon--google-play" src="../images/googleplay-icon.png"></button>
-<button onclick="location.href='https://apps.apple.com/tr/app/hot-pet/id1537957530'" class="btn btn-dark btn-lg download-btn text-center" type="button"><i class="fab fa-apple"></i></button>		</div>
-	</nav>
+    <!-- ############################################################################################################ -->
 
-  <!-- ############################################################################################################ -->
+    <div class="docs">
+      <h3>
+        LIGHTING TEXT FOR THE PROTECTION OF PERSONAL DATA IN ACCORDANCE WITH THE
+        LAW ON THE PROTECTION OF PERSONAL DATA NO. 6698 AND THE GENERAL DATA
+        PROTECTION REGULATION OF THE EUROPEAN UNION
+      </h3>
+      <p>Dear Member,</p>
+      <p>
+        This agreement, in electronic form, member and CUK Creative Bilişim
+        Danışmanlık Tic. Co. Ltd. It shall be concluded and entered into force
+        at the time of acceptance between the (“operator”).
+      </p>
+      <h3>1. Definitions</h3>
+      <p>
+        <b>Personal data:</b> any information relating to an identified or
+        identifiable natural person. For example, first name, last name,
+        address, phone number, e-mail address, other social media member names,
+        profile pictures and any other information to identify the member.
+      </p>
+      <p>
+        <b>Profile:</b> A member-specific interactive area created with
+        information provided by the Member To Hot-pet, consisting of an email
+        address, mobile phone, userName, first name, last name, date of birth,
+        gender, password and photo(s)added by the member, which can be viewed by
+        other members.
+      </p>
+      <p>
+        <b>Alias / userName:</b> a name that a member uses in such a way that it
+        can no longer be associated with a specific data owner without using
+        their personal data when creating their profile..
+      </p>
+      <p>
+        <b>Commercial electronic messaging:</b> messages with data, audio and
+        video content that are performed electronically and sent for commercial
+        purposes using means such as telephone, call centers, fax, automatic
+        dialing machines, intelligent voice recorder systems, electronic mail,
+        text message service.
+      </p>
+      <p>
+        <b>Member:</b> a person who has completed the process of becoming a
+        member by clicking on the button on the “register” link located on the
+        Hot-Pet home page/Home screen and following the necessary steps.
+      </p>
+      <p><b>App:</b> hot-Pet mobile app.</p>
+      <p>
+        Operator, 51 of the electronic communication code on the confidentiality
+        of personal information. Item No. 6698 in relation to the processing of
+        personal data and the law on protection of personal data brought is
+        obliged to comply with the provisions of the regulations and other
+        relevant legislation of the European Union in terms of users who use the
+        application interface is located within the boundaries of 2016/679EU of
+        the European Union General Data Protection Regulation (GDPR) would
+        monitor compliance, in accordance with the provisions of these
+        regulations; all types of Member Information and personal data are
+        confidential information, keep this information and data private and
+        confidential indefinitely during and after the contract, add it as a
+        secret obligation, use, process, transfer it without approval in any
+        way, warn all employees about it and take all technical and
+        administrative measures in this direction to a minimum, eat a third
+        person to take all necessary measures to prevent the disclosure and due
+        diligence reaching thanks to the information itself linked/unlinked all
+        employees/partners/counsel/sub the scope of this article employers and
+        interested parties in violation of any damages that occur due to the
+        movements it is accepted that joint and several would be responsible.
+      </p>
+      <p>
+        The operator will be able to process the personal data of the member in
+        accordance with the purposes specified, limited to the scope and
+        conditions specified under this Agreement. The operator may obtain
+        members ' information about the use of Hot-Pet by using cookies, a
+        technical contact file. To the lighting text with details about the
+        processing of your personal data
+        <a href="https://www.hot-pet.com">https://www.hot-pet.com</a>
+        referencesexternal links.
+      </p>
+      <h3>Privacy and protection of personal data</h3>
+      <p>
+        The processing of personal data, particularly aimed at the protection of
+        fundamental rights and freedoms of individuals to privacy 29677 No.
+        6698, dated April 7, 2016 published in the official gazette on
+        protection of personal data Law (“Law”)’s “Lighting Data Principal
+        obligation” in Article 10, entitled as, In accordance with the
+        communiqué on the procedures and principles to be followed in the
+        fulfillment of the lighting obligation published in the Official Gazette
+        No. 30356 dated March 10, 2018 and the European Union General Data
+        Protection Regulation No. 2016/679 (“GDPR”), CUK Creative Bilişim
+        Danışmanlık Tic with this lighting text. Co. Ltd. as a data controller
+        (GDPR Article 4(7), KVKK Article 3(1) (I))), we aim to inform you about
+        your personal data processed and listed below.
+      </p>
+      <p>
+        CUK Creative Bilişim Danışmanlık Tic. Co. Ltd. in order to ensure the
+        unlawful processing, access and preservation of your personal data, it
+        takes all technical and administrative measures to ensure the
+        appropriate level of security.
+      </p>
+      <h3>1. PROCESSED CONTACTS DATA</h3>
+      <p>
+        Personal data refers to any information relating to an identified or
+        identifiable person. Below are the categories of your processed personal
+        data and data.
+      </p>
+      <p>
+        Credentials: first name, last name, date of birth and gender information
+      </p>
+      <p>
+        Contact information: phone number, contact address and email address
+      </p>
+      <p>
+        Contact information: phone number, contact address and email address
+      </p>
+      <p>Location information: location information</p>
+      <p>Marketing information: campaign information and Cookie registration</p>
+      <p>
+        Usage Information: transaction information, in-app transaction
+        information
+      </p>
+      <p>
+        Transaction security information: password, IP information and access
+        records.
+      </p>
+      <h3>2. PURPOSES OF PROCESSING PERSONAL DATA</h3>
+      <p>
+        Your personal data may be processed for the following purposes in
+        accordance with the processing conditions and secondary regulations set
+        out in Articles 5 and 6 of the law and the considerations set out in
+        Article 5 and 6 of the GDPR entitled “Principles for processing personal
+        data” and “compliance with the law of processing activity” : Product,
+        service and business development in conventional and digital media
+        within the scope of network and technological advances/improvements for
+        better service delivery,
+      </p>
+      <ul>
+        <li>
+          Innovation awareness activities and information, as well as detection
+          and Prevention of all types of malicious uses (such as virus attacks
+          and cyber attacks) ,
+        </li>
+        <li>Analysis and research for product and business development,</li>
+        <li>
+          Realization of your demands, conclusion of your complaints,
+          disclosure, investigation and measurement of customer satisfaction,
+          consumer trends, loyalty,
+        </li>
+        <li>Execution of marketing processes of products/services,</li>
+        <li>
+          Conducting information processes about awards / sweepstakes / contests
+          / gifts / thanks / Celebrations / Reminders / brand collaborations,
+        </li>
+        <li>
+          Offering products/services for commercial purposes, diversification of
+          products and services through marketing activities such as
+          advertising, targeted advertising, campaigns, offers, performance
+          measurement/rating operations and communication activities,
+        </li>
+        <li>
+          Training and development of our employees for better service delivery,
+        </li>
+        <li>
+          CUK Creative Bilişim Danışmanlık Tic. Co. Ltd. and preparation,
+          presentation and promotion of campaigns and offers related to the
+          products and services of Third companies according to your use,
+        </li>
+        <li>Informing about the content of the campaign,</li>
+        <li>
+          Traffic management, providing services, products and services and
+          analyzing,
+        </li>
+        <li>
+          Strategy, planning and planning of business development activities,
+        </li>
+        <li>
+          Providing contractual requirements and financial reconciliation for
+          products and services offered together with our business partners or
+          other third parties,
+        </li>
+        <li>
+          Sharing the necessary information for the purpose of fulfilling the
+          legal obligations contained in the legislation related to regulatory
+          and supervisory institutions, official authorities and audit
+          activities,
+        </li>
+        <li>Measurement of service quality,</li>
+        <li>Conducting financial reporting and analysis studies,</li>
+        <li>Conduct complaints and legal follow-up processes,</li>
+      </ul>
+      <h3>3. TRANSFER OF PERSONAL DATA</h3>
+      <p>
+        Your personal data, in accordance with laws and other legislation and in
+        accordance with the provisions of the law on the transfer of personal
+        data at home and abroad for the purposes described below 3. may be
+        transferred to the parties:
+      </p>
+      <ul>
+        <li>
+          CUK Creative Bilişim Danışmanlık Tic. Co. Ltd. and with companies of
+          which CUK creative is a shareholder,
+        </li>
+        <li>
+          Authorized companies, representatives, dealers operating on our
+          company's behalf and account,
+        </li>
+        <li>
+          Regulatory and supervisory bodies, competent authorities that will
+          determine your location in case of an emergency call, public
+          institutions or organizations that are explicitly authorized to
+          request your personal data in the laws to which it is subject,
+        </li>
+        <li>
+          Business partnerships, supplier and contractor companies, payment and
+          e-money institutions, banks, credit risk and financial institutions,
+          and legal processes, with mandatory follow individuals, institutions
+          and organizations,
+        </li>
+        <li>Lawyers, auditors, consultants and firms receiving services.</li>
+      </ul>
+      <h3>4. METHODS AND LEGAL REASONS FOR COLLECTING PERSONAL DATA</h3>
+      <p>
+        Your personal data can be provided by automatic methods through our
+        website, mobile application and similar media during the establishment
+        of our legal relationship with the relevant persons and during the
+        continuation of this relationship and processed within the legal reasons
+        mentioned below.
+      </p>
+      <ul>
+        <li>Having your explicit consent,</li>
+        <li>Clearly stipulated in the laws,</li>
+        <li>
+          Compliance with national and international principles and principles
+          related to customer recognition, compliance with information storage,
+          reporting, information obligations stipulated by legislation and
+          official authorities,
+        </li>
+        <li>
+          The processing of personal data belonging to the parties to the
+          contract is necessary, provided that it is directly related to the
+          establishment or execution of the contract, the ability to provide the
+          requested products and services and the fulfillment of the
+          requirements of the contracts you have concluded,
+        </li>
+        <li>Mandatory for the fulfillment of the legal obligation,</li>
+        <li>Publicized by the person concerned,</li>
+        <li>
+          Data processing is mandatory for the establishment, use or protection
+          of a right,
+        </li>
+        <li>
+          Data processing is mandatory for the legitimate interests of the data
+          controller, provided that it does not damage the fundamental rights
+          and freedoms of the person concerned.
+        </li>
+      </ul>
+      <h3>5. IF YOU WANT TO CONTACT US FOR YOUR RIGHTS AND DEMANDS</h3>
+      <p>
+        CUK Creative Bilişim Danışmanlık Tic according to your requests, nature
+        and application method in accordance with Article 11 of the law
+        regulating the rights of the person concerned. Co. Ltd. in order to
+        determine whether the application belongs to you and thus protect your
+        rights, the data controller has a petition arranged in accordance with
+        the requirements set out in the Communique (communique) on the
+        procedures and principles of the application:
+      </p>
+      <ul>
+        <li>
+          You can send it directly to our addresses listed below for the
+          relevant channel, by mail or by notary public,
+        </li>
+        <li>
+          You can forward it to our Email addresses listed below by using texts
+          that can be sent and stored with a registered electronic mail (Pep)
+          address, secure electronic signature or mobile signature.
+        </li>
+      </ul>
+      <p>
+        Applications to be made in this context will be accepted after
+        authentication by us, and your requests will be completed as soon as
+        possible and no later than 30 days, depending on the nature of the
+        request. If the application is answered in writing, up to 10 pages will
+        not be charged and 1 Turkish Lira processing fee may be charged for each
+        page above 10 pages. If the answer to the application is given in a
+        recording medium such as a CD, flash memory, a fee may be charged in the
+        amount of the cost of the recording medium.
+      </p>
+      <p>
+        The rights you have under Article 15 of the GDPR entitled “rights of the
+        data subject” are as follows:
+      </p>
+      <ul>
+        <li>Right of access</li>
+        <li>Right to rectification</li>
+        <li>Right to erase (“right to be forgotten")”)</li>
+        <li>Right to restriction of processing</li>
+        <li>Right to data portability</li>
+        <li>Right to appeal</li>
+      </ul>
+      <p>
+        Application channel and addresses Company Title CUK Creative Bilişim
+        Danışmanlık Tic. Co. Ltd.
+      </p>
+      <p>
+        Direct application: GÜLBAHÇE MAHALLESI GÜLBAHÇE CAD. Incubation Center
+        building Sit. NO. 1 / 45 / 21 HEADQUARTERS-HEADQUARTERS URLA / IZMIR
+        BUILDING CODE: 28896182
+      </p>
+      <p>
+        Notary / Postal Channel: GÜLBAHÇE MAHALLESI GÜLBAHÇE CAD. Incubation
+        Center building Sit. NO. 1 / 45 / 21 HEADQUARTERS-HEADQUARTERS URLA /
+        IZMIR BUILDING CODE: 28896182
+      </p>
+      <p>Mail: <a href="info@hot-pet.com">info@hot-pet.com.tr</a></p>
+    </div>
 
-  <div class="docs">
-    <h3>
-      LIGHTING TEXT FOR THE PROTECTION OF PERSONAL DATA IN
-      ACCORDANCE WITH THE LAW ON THE PROTECTION OF
-      PERSONAL DATA NO. 6698 AND THE GENERAL DATA
-      PROTECTION REGULATION OF THE EUROPEAN UNION 
-    </h3>
-    <p>Dear Member, </p>
-    <p>
-      This agreement, in electronic form, member and CUK
-      Creative Bilişim Danışmanlık Tic. Co. Ltd. It shall be concluded
-      and entered into force at the time of acceptance between the
-      (“operator”).
-    </p>
-    <h3>
-      1. Definitions 
-    </h3>
-    <p>
-      <b>Personal data:</b> any information relating to an identified or
-      identifiable natural person. For example, first name, last
-      name, address, phone number, e-mail address, other social
-      media member names, profile pictures and any other
-      information to identify the member. 
-    </p>
-    <p>
-      <b>Profile:</b> A member-specific interactive area created with
-      information provided by the Member To Hot-pet, consisting
-      of an email address, mobile phone, userName, first name, last
-      name, date of birth, gender, password and photo(s)added by
-      the member, which can be viewed by other members. 
-    </p>
-    <p>
-      <b>Alias / userName:</b> a name that a member uses in such a
-      way that it can no longer be associated with a specific data
-      owner without using their personal data when creating their
-      profile.. 
-    </p>
-    <p>
-      <b>Commercial electronic messaging:</b> messages with data,
-      audio and video content that are performed electronically
-      and sent for commercial purposes using means such as 
-      telephone, call centers, fax, automatic dialing machines,
-      intelligent voice recorder systems, electronic mail, text
-      message service. 
-    </p>
-    <p>
-      <b>Member:</b> a person who has completed the process of
-      becoming a member by clicking on the button on the
-      “register” link located on the Hot-Pet home page/Home
-      screen and following the necessary steps. 
-    </p>
-    <p><b>App:</b> hot-Pet mobile app. </p>
-    <p>
-      Operator, 51 of the electronic communication code on the
-      confidentiality of personal information. Item No. 6698 in
-      relation to the processing of personal data and the law on
-      protection of personal data brought is obliged to comply with
-      the provisions of the regulations and other relevant
-      legislation of the European Union in terms of users who use
-      the application interface is located within the boundaries of
-      2016/679EU of the European Union General Data Protection
-      Regulation (GDPR) would monitor compliance, in accordance
-      with the provisions of these regulations; all types of Member
-      Information and personal data are confidential information,
-      keep this information and data private and confidential
-      indefinitely during and after the contract, add it as a secret
-      obligation, use, process, transfer it without approval in any
-      way, warn all employees about it and take all technical and
-      administrative measures in this direction to a minimum, eat a
-      third person to take all necessary measures to prevent the
-      disclosure and due diligence reaching thanks to the
-      information itself linked/unlinked all
-      employees/partners/counsel/sub the scope of this article
-      employers and interested parties in violation of any damages 
-      that occur due to the movements it is accepted that joint and
-      several would be responsible. 
-    </p>
-    <p>
-      The operator will be able to process the personal data of the
-      member in accordance with the purposes specified, limited to
-      the scope and conditions specified under this Agreement.
-      The operator may obtain members ' information about the
-      use of Hot-Pet by using cookies, a technical contact file.
-      To the lighting text with details about the processing of your
-      personal data <a href="https://www.hot-pet.com">https://www.hot-pet.com</a> referencesexternal
-      links. 
-    </p>
-    <h3>Privacy and protection of personal data </h3>
-    <p>
-      The processing of personal data, particularly aimed at the
-      protection of fundamental rights and freedoms of individuals
-      to privacy 29677 No. 6698, dated April 7, 2016 published in
-      the official gazette on protection of personal data Law
-      (“Law”)’s “Lighting Data Principal obligation” in Article 10,
-      entitled as, In accordance with the communiqué on the
-      procedures and principles to be followed in the fulfillment of
-      the lighting obligation published in the Official Gazette No.
-      30356 dated March 10, 2018 and the European Union
-      General Data Protection Regulation No. 2016/679 (“GDPR”),
-      CUK Creative Bilişim Danışmanlık Tic with this lighting text.
-      Co. Ltd. as a data controller (GDPR Article 4(7), KVKK Article
-      3(1) (I))), we aim to inform you about your personal data
-      processed and listed below.
-    </p>
-    <p>
-      CUK Creative Bilişim Danışmanlık Tic. Co. Ltd. in order to
-      ensure the unlawful processing, access and preservation of 
-      your personal data, it takes all technical and administrative
-      measures to ensure the appropriate level of security. 
-    </p>
-    <h3>1. PROCESSED CONTACTS DATA </h3>
-    <p>
-      Personal data refers to any information relating to an
-      identified or identifiable person. Below are the categories of
-      your processed personal data and data. 
-    </p>
-    <p>
-      Credentials: first name, last name, date of birth and gender information 
-    </p>
-    <p>
-      Contact information: phone number, contact address and email address 
-    </p>
-    <p>
-      Contact information: phone number, contact address and email address 
-    </p>
-    <p>
-      Location information: location information 
-    </p>
-    <p>
-      Marketing information: campaign information and Cookie registration
-    </p>
-    <p>
-      Usage Information: transaction information, in-app transaction information 
-    </p>
-    <p>
-      Transaction security information: password, IP information and access records.
-    </p>
-    <h3>2. PURPOSES OF PROCESSING PERSONAL DATA </h3>
-    <p>
-      Your personal data may be processed for the following
-      purposes in accordance with the processing conditions and
-      secondary regulations set out in Articles 5 and 6 of the law
-      and the considerations set out in Article 5 and 6 of the GDPR
-      entitled “Principles for processing personal data” and
-      “compliance with the law of processing activity” : 
-      Product, service and business development in conventional
-      and digital media within the scope of network and
-      technological advances/improvements for better service
-      delivery, 
-    </p>
-    <ul>
-      <li>
-        Innovation awareness activities and information, as
-        well as detection and Prevention of all types of
-        malicious uses (such as virus attacks and cyber
-        attacks) , 
-      </li>
-      <li>
-        Analysis and research for product and business development, 
-      </li>
-      <li>
-        Realization of your demands, conclusion of your
-        complaints, disclosure, investigation and
-        measurement of customer satisfaction, consumer
-        trends, loyalty, 
-      </li>
-      <li>
-        Execution of marketing processes of products/services,
-      </li>
-      <li>
-        Conducting information processes about awards / sweepstakes / contests / gifts / thanks / Celebrations / Reminders / brand collaborations,
-      </li>
-      <li>
-        Offering products/services for commercial purposes,
-        diversification of products and services through
-        marketing activities such as advertising, targeted
-        advertising, campaigns, offers, performance
-        measurement/rating operations and communication
-        activities, 
-      </li>
-      <li>
-        Training and development of our employees for better service delivery, 
-      </li>
-      <li>
-        CUK Creative Bilişim Danışmanlık Tic. Co. Ltd. and
-        preparation, presentation and promotion of 
-        campaigns and offers related to the products and
-        services of Third companies according to your use, 
-      </li>
-      <li>Informing about the content of the campaign, </li>
-      <li>
-        Traffic management, providing services, products and services and analyzing, 
-      </li>
-      <li>
-        Strategy, planning and planning of business development activities, 
-      </li>
-      <li>
-        Providing contractual requirements and financial
-        reconciliation for products and services offered
-        together with our business partners or other third
-        parties,
-      </li>
-      <li>
-        Sharing the necessary information for the purpose of
-        fulfilling the legal obligations contained in the
-        legislation related to regulatory and supervisory
-        institutions, official authorities and audit activities,
-      </li>
-      <li>Measurement of service quality, </li>
-      <li>Conducting financial reporting and analysis studies,</li>
-      <li>Conduct complaints and legal follow-up processes, </li>
-    </ul>
-    <h3>3. TRANSFER OF PERSONAL DATA </h3>
-    <p>
-      Your personal data, in accordance with laws and other
-      legislation and in accordance with the provisions of the law
-      on the transfer of personal data at home and abroad for the
-      purposes described below 3. may be transferred to the
-      parties:
-    </p>
-    <ul>
-      <li>
-        CUK Creative Bilişim Danışmanlık Tic. Co. Ltd. and with companies of which CUK creative is a shareholder, 
-      </li>
-      <li>
-        Authorized companies, representatives, dealers operating on our company's behalf and account,
-      </li>
-      <li>
-        Regulatory and supervisory bodies, competent
-        authorities that will determine your location in case of
-        an emergency call, public institutions or organizations
-        that are explicitly authorized to request your personal
-        data in the laws to which it is subject, 
-      </li>
-      <li>
-        Business partnerships, supplier and contractor
-        companies, payment and e-money institutions, banks,
-        credit risk and financial institutions, and legal
-        processes, with mandatory follow individuals,
-        institutions and organizations,
-      </li>
-      <li>
-        Lawyers, auditors, consultants and firms receiving services. 
-      </li>
-    </ul>
-    <h3>4. METHODS AND LEGAL REASONS FOR COLLECTING
-PERSONAL DATA </h3>
-    <p>
-      Your personal data can be provided by automatic methods
-      through our website, mobile application and similar media
-      during the establishment of our legal relationship with the
-      relevant persons and during the continuation of this
-      relationship and processed within the legal reasons
-      mentioned below. 
-    </p>
-    <ul>
-      <li>Having your explicit consent, </li>
-      <li>Clearly stipulated in the laws,</li>
-      <li>
-        Compliance with national and international principles
-        and principles related to customer recognition,
-        compliance with information storage, reporting,
-        information obligations stipulated by legislation and
-        official authorities,
-      </li>
-      <li>
-        The processing of personal data belonging to the
-        parties to the contract is necessary, provided that it is 
-        directly related to the establishment or execution of
-        the contract, the ability to provide the requested
-        products and services and the fulfillment of the
-        requirements of the contracts you have concluded,
-      </li>
-      <li>Mandatory for the fulfillment of the legal obligation,</li>
-      <li>Publicized by the person concerned, </li>
-      <li>
-        Data processing is mandatory for the establishment, use or protection of a right,
-      </li>
-      <li>
-        Data processing is mandatory for the legitimate
-        interests of the data controller, provided that it does
-        not damage the fundamental rights and freedoms of
-        the person concerned. 
-      </li>
-    </ul>
-    <h3>5. IF YOU WANT TO CONTACT US FOR YOUR RIGHTS AND DEMANDS </h3>
-    <p>
-      CUK Creative Bilişim Danışmanlık Tic according to your
-      requests, nature and application method in accordance with
-      Article 11 of the law regulating the rights of the person
-      concerned. Co. Ltd. in order to determine whether the
-      application belongs to you and thus protect your rights, the
-      data controller has a petition arranged in accordance with the
-      requirements set out in the Communique (communique) on
-      the procedures and principles of the application:
-    </p>
-    <ul>
-      <li>
-        You can send it directly to our addresses listed below for the relevant channel, by mail or by notary public, 
-      </li>
-      <li>
-        You can forward it to our Email addresses listed below by
-        using texts that can be sent and stored with a registered
-        electronic mail (Pep) address, secure electronic signature or
-        mobile signature. 
-      </li>
-    </ul>
-    <p>
-      Applications to be made in this context will be accepted after
-      authentication by us, and your requests will be completed as
-      soon as possible and no later than 30 days, depending on the
-      nature of the request. If the application is answered in
-      writing, up to 10 pages will not be charged and 1 Turkish Lira
-      processing fee may be charged for each page above 10 pages.
-      If the answer to the application is given in a recording
-      medium such as a CD, flash memory, a fee may be charged in
-      the amount of the cost of the recording medium. 
-    </p>
-    <p>
-      The rights you have under Article 15 of the GDPR entitled “rights of the data subject” are as follows: 
-    </p>
-    <ul>
-      <li>Right of access </li>
-      <li>Right to rectification </li>
-      <li>Right to erase (“right to be forgotten")”)</li>
-      <li>Right to restriction of processing </li>
-      <li>Right to data portability </li>
-      <li>Right to appeal </li>
-    </ul>
-    <p>
-      Application channel and addresses
-      Company Title
-      CUK Creative Bilişim Danışmanlık Tic. Co. Ltd.
-    </p>
-    <p>
-      Direct application: GÜLBAHÇE MAHALLESI GÜLBAHÇE CAD.
-      Incubation Center building Sit. NO. 1 / 45 / 21
-      HEADQUARTERS-HEADQUARTERS URLA / IZMIR BUILDING
-      CODE: 28896182
-    </p>
-    <p>
-      Notary / Postal Channel: GÜLBAHÇE MAHALLESI GÜLBAHÇE
-      CAD. Incubation Center building Sit. NO. 1 / 45 / 21
-      HEADQUARTERS-HEADQUARTERS URLA / IZMIR BUILDING
-      CODE: 28896182 
-    </p>
-    <p>Mail: <a href="info@hot-pet.com">info@hot-pet.com.tr</a> </p>
-  </div>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-		crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-		crossorigin="anonymous"></script>
-
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

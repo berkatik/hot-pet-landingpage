@@ -1,109 +1,231 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hot-Pet</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&family=Ubuntu:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "473689777127578");
+      fbq("track", "PageView");
+    </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        src="https://www.facebook.com/tr?id=473689777127578&ev=PageView&noscript=1"
+      />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="./">hot-pet</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-<head>
-  <meta charset="utf-8">
-  <title>Hot-Pet</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&family=Ubuntu:wght@300;500&display=swap"
-		rel="stylesheet">
-	<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Company
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="./about.html">About Us</a>
+              <a class="dropdown-item" href="./contact.html">Contact Us</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Legal
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="./documents/privacy-policy.html"
+                >Privacy Policy</a
+              >
+              <a class="dropdown-item" href="./documents/terms-of-use.html"
+                >Terms of Use</a
+              >
+              <!-- <a class="dropdown-item" href="./documents/">Çerez Politikası</a> -->
+              <a class="dropdown-item" href="./documents/kvkk.html"
+                >Data Protection</a
+              >
+              <a class="dropdown-item" href="./documents/sniff-safely.html"
+                >Sniff Safely</a
+              >
+              <a class="dropdown-item" href="./documents/community-rules.html"
+                >Community Rules</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pricing">Subscriptions</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <img class="language__icon" src="./images/worldwide.svg" />
+              <span class="language__text">EN</span>
+            </a>
+            <div
+              class="dropdown-menu language__item__container"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <a class="dropdown-item language__item" href="/tr/"
+                ><span class="language__item">TR</span></a
+              >
+            </div>
+          </li>
+        </ul>
+        <button
+          onclick="location.href='https://play.google.com/store/apps/details?id=co.cukcreative.hotpet'"
+          class="btn btn-light btn-lg download-btn text-center"
+          type="button"
+        >
+          <img class="icon--google-play" src="./images/googleplay-icon.png" />
+        </button>
+        <button
+          onclick="location.href='https://apps.apple.com/tr/app/hot-pet/id1537957530'"
+          class="btn btn-dark btn-lg download-btn text-center"
+          type="button"
+        >
+          <i class="fab fa-apple"></i>
+        </button>
+      </div>
+    </nav>
 
-	<nav class="navbar navbar-expand-lg navbar-dark">
-		<a class="navbar-brand" href="./">hot-pet</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>		
-		
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Company
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item" href="./about.html">About Us</a>
-						<a class="dropdown-item" href="./contact.html">Contact Us</a>
-					</div>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Legal
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item" href="./documents/privacy-policy.html">Privacy Policy</a>
-						<a class="dropdown-item" href="./documents/terms-of-use.html">Terms of Use</a>
-						<!-- <a class="dropdown-item" href="./documents/">Çerez Politikası</a> -->
-						<a class="dropdown-item" href="./documents/kvkk.html">Data Protection</a>
-						<a class="dropdown-item" href="./documents/sniff-safely.html">Sniff Safely</a>
-						<a class="dropdown-item" href="./documents/community-rules.html">Community Rules</a>
-					</div>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#pricing">Subscriptions</a>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<img class="language__icon" src="./images/worldwide.svg"> <span class="language__text">EN</span>
-					</a>
-					<div class="dropdown-menu language__item__container" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item language__item" href="/tr/"><span class="language__item">TR</span></a>	
-					</div>
-				</li>
-			</ul>
-<button onclick="location.href='https://play.google.com/store/apps/details?id=co.cukcreative.hotpet'" class="btn btn-light btn-lg download-btn text-center" type="button"><img class="icon--google-play" src="./images/googleplay-icon.png"></button>			<button onclick="location.href='https://apps.apple.com/tr/app/hot-pet/id1537957530'" class="btn btn-dark btn-lg download-btn text-center" type="button"><i class="fab fa-apple"></i></button>
-		</div>
-  </nav>
+    <div class="about-us">
+      <h2 class="about-us__header">
+        Dear Hot-Pets and their sweet, sweet parents. Now nothing will be the
+        same..
+      </h2>
+      <p class="about-us__text">
+        Now, every pet looking for love, wanting to flirt, wanting to mate and
+        give birth to a puppy or kitten, or looking for a pair of ears to sniff
+        if it's aimless, should be in a warm pet! Join Hot-pet and just be a hot
+        pet from now on!
+      </p>
+      <p class="about-us__text">
+        Dear Hot-Pet, whatever your goal, it is the only and most beautiful
+        places where you will find the right match for yourself! Let's be
+        realistic, why does the dating world still revolve around the real world
+        for you? Why do you still have to look for your soul mate when you can
+        walk outside and along the route? Come on, it's us now! Whether you're a
+        cat or a dog, the Hot-Pet is here to meet all the possiblities. Come on,
+        start Sniff right and Sniff left now!
+      </p>
+    </div>
 
-  <div class="about-us">
-    <h2 class="about-us__header">Dear Hot-Pets and their sweet, sweet parents. Now nothing will be the same.. </h2>
-    <p class="about-us__text">
-      Now, every pet looking for love, wanting to flirt, wanting to mate and give birth to a puppy or kitten, 
-      or looking for a pair of ears to sniff if it's aimless, should be in a warm pet! Join Hot-pet and just be a hot pet from now on! 
-    </p>
-    <p class="about-us__text">
-      Dear Hot-Pet, whatever your goal, it is the only and most beautiful places where you will find the right match for yourself! 
-      Let's be realistic, why does the dating world still revolve around the real world for you? Why do you still have to look for 
-      your soul mate when you can walk outside and along the route? Come on, it's us now!  Whether you're a cat or a dog, the Hot-Pet 
-      is here to meet all the possiblities. Come on, start Sniff right and Sniff left now!
-    </p>
+    <!-- Footer -->
 
+    <footer id="footer">
+      <span class="footer__text">Stay Social!</span>
+      <div class="social-icons__container">
+        <a href="https://twitter.com/hotpetapp"
+          ><i class="fab fa-twitter social-icons icon--twitter"></i
+        ></a>
+      </div>
+      <div class="social-icons__container">
+        <a href="https://www.facebook.com/Hotpetapp"
+          ><i class="fab fa-facebook-f social-icons icon--facebook"></i
+        ></a>
+      </div>
+      <div class="social-icons__container">
+        <a href="https://www.instagram.com/hotpetapp/"
+          ><i class="fab fa-instagram social-icons icon--instagram"></i
+        ></a>
+      </div>
+      <div class="social-icons__container">
+        <a href="mailto:help@hot-pet.com"
+          ><i class="fas fa-envelope social-icons icon--email"></i
+        ></a>
+      </div>
+      <p>© Copyright 2021 Cuk Creative</p>
+    </footer>
 
-  </div>
-
-	<!-- Footer -->
-
-	<footer id="footer">
-		<span class="footer__text">Stay Social!</span>
-		<div class="social-icons__container">
-			<a href="https://twitter.com/hotpetapp"><i class="fab fa-twitter social-icons icon--twitter"></i></a>
-		</div>
-		<div class="social-icons__container">
-			<a href="https://www.facebook.com/Hotpetapp"><i class="fab fa-facebook-f social-icons icon--facebook"></i></a>
-		</div>
-		<div class="social-icons__container">
-			<a href="https://www.instagram.com/hotpetapp/"><i class="fab fa-instagram social-icons icon--instagram"></i></a>
-		</div>
-		<div class="social-icons__container">
-			<a href="mailto:help@hot-pet.com"><i class="fas fa-envelope social-icons icon--email"></i></a>
-		</div>
-		<p>© Copyright 2021 Cuk Creative</p>
-	</footer>
-
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-		crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-		crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
